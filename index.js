@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 3000;
 
 let sessionHistory = [];
 
+const cors = require('cors');
+app.use(cors());
+
 app.set('trust proxy', true); // IP取得用
 
 app.get('/api/log', async (req, res) => {
